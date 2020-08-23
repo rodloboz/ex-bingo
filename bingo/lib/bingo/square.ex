@@ -1,4 +1,6 @@
 defmodule Bingo.Square do
+
+  @enforce_keys [:phrase, :points]
   defstruct [:phrase, :points, :marked_by]
 
   alias __MODULE__
@@ -16,4 +18,5 @@ defmodule Bingo.Square do
   def from_buzzword(%{phrase: phrase, points: points}) do
     Square.new(phrase, points)
   end
+
 end
